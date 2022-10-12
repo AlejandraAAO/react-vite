@@ -1,4 +1,4 @@
-
+import TaskCard from "./TaskCard";
 export default function TaskList({tasks}) {
   
 
@@ -10,9 +10,7 @@ export default function TaskList({tasks}) {
   return (
     <div>
       {tasks.map((task) => (
-        <div key={task.id}>
-            <h3>{task.title}</h3>
-        </div>
+       <TaskCard key={task.id} task ={task}/>
       ))}
     </div>
   );
