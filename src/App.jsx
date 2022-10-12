@@ -33,10 +33,17 @@ function createTask (task){
   } ])
  }
 
+ function deleteTask (taskId){
+  //retorna un nuevo array
+  setTasks(tasks.filter(task => task.id !== taskId))
+
+  console.log(taskId)
+ }
+
   return (
     <div>
-      <TaskForm createTask = {createTask}/>
-      <TaskList tasks ={tasks} />
+      <TaskForm createTask = {createTask} />
+      <TaskList tasks ={tasks} deleteTask = {deleteTask}/>
       
     </div>
   );
